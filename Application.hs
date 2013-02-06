@@ -1,4 +1,6 @@
+{-# LANGUAGE TemplateHaskell, MultiParamTypeClasses #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
+
 module Application
     ( makeApplication
     , getApplicationDev
