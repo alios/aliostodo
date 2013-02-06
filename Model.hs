@@ -1,3 +1,5 @@
+{-# LANGUAGE TemplateHaskell, TypeFamilies, FlexibleContexts, GADTs#-}
+
 module Model where
 
 import Prelude
