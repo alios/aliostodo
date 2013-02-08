@@ -1,0 +1,10 @@
+<h1>_{MsgHello}
+    
+  <div #form>
+    $maybe (desc,use) <- submission
+      <div .message>
+        Your file's type was 
+    <form method=post action=@{PublishR}#form enctype=#{formEnctype}>
+      ^{formWidget}
+      <input type="submit" value="Send it!">
+
