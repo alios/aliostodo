@@ -83,9 +83,14 @@ instance Yesod App where
         -- you to use normal widget features in default-layout.
 
         pc <- widgetToPageContent $ do
-            $(widgetFile "normalize")
-            addStylesheet $ StaticR css_bootstrap_css
-            $(widgetFile "default-layout")
+          addStylesheet $ StaticR css_normalize_css
+          addStylesheet $ StaticR css_bootstrap_min_css
+          addStylesheet $ StaticR css_main_css
+          addScript $ StaticR js_vendor_modernizr_2_6_2_min_js
+          addScript $ StaticR js_vendor_jquery_1_9_1_min_js
+          addScript $ StaticR js_plugins_js
+          addScript $ StaticR js_main_js
+          $(widgetFile "default-layout")
         hamletToRepHtml $(hamletFile "templates/default-layout-wrapper.hamlet")
 
     -- This is done to provide an optimization for serving static files from

@@ -1,5 +1,5 @@
 name:              aliostodo
-version:           0.0.0
+version:           0.1.0
 cabal-version:     >= 1.8
 build-type:        Simple
 
@@ -70,6 +70,7 @@ library
                  , data-default
                  , aeson
                  , time                          >= 1.4
+                 , blaze-markup                  >= 0.5
 
 executable         aliostodo
     if flag(library-only)

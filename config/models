@@ -12,6 +12,7 @@ Email
 
 TodoItem
     userid UserId
+    title Text
     text Text
     use Int
     length Int
